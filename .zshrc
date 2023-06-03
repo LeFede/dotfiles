@@ -111,13 +111,20 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+#################################### FEDE #####################################
 
-# alias code='/var/lib/flatpak/exports/bin/com.visualstudio.code'
-alias clip='xclip -selection clipboard'
+# Clip
+alias clip='xclip -selection clipboard' 
+
+# Rust
 alias rwatch='cargo watch -q -c -x "run -q"'
 alias rrun='clear && cargo run -q "run -q"'
-alias sz='source ~/.zshrc'
-alias z='nano ~/.zshrc'
+
+# Bash
+alias sz='vim ~/.zshrc'
+alias z='vim ~/.zshrc'
+
+# SurrealDB
 alias post='
 	curl --request POST \
 	--header "Accept: application/json" \
@@ -127,27 +134,32 @@ alias post='
 	--data "${DATA}" \
 	http://localhost:8000/sql | fx .'
 alias surreal_test="surreal start --log debug --user root --pass root memory"
+
+# Misc
 alias c='kill -9 -1'
-alias uwu='echo \"$1\"'
+
+# TMUX
 alias ta='tmux attach'
-# alias vim='~/.local/share/nvim.appimage'
 alias h='cd ~'
 
+# Open nvim (file)
 vim() {
-        ~/.local/share/nvim.appimage $1
+  ~/.local/share/nvim.appimage $1
 }
 
+# Open nvim (folder)
 o() {
 	cd $1
 	~/.local/share/nvim.appimage .
 }
 
-
+# ???
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
+# Oh my zsh
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_with_package"
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
