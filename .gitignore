@@ -1,0 +1,14 @@
+/*
+
+!.config
+.config/*
+
+!.config/alacritty
+!.config/nvim
+!.config/tmux
+
+!.zshrc
+!.bashrc
+
+!.fonts
+!.gitignore
