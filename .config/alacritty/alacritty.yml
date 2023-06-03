@@ -1,0 +1,23 @@
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+window:
+  history: 10000
+  # decorations: 'none'
+  opacity: .95
+  dynamic_title: true
+  dynamic_padding: true
+font:
+  normal:
+    family: "JetBrainsMono Nerd Font"
+  bold:
+    family: "JetBrainsMono Nerd Font"
+  italic:
+    family: "JetBrainsMono Nerd Font"
+  size: 24
+env:
+  TERM: xterm-256color
+# cursor:
+#   #   - ▇ Block
+#   #   - _ Underline
+#   #   - | Beam
+#  style: Beam
