@@ -113,6 +113,9 @@ source $ZSH/oh-my-zsh.sh
 
 #################################### FEDE #####################################
 
+# ~ Psql
+alias sql='sudo -u postgres psql'
+
 # Clip
 alias clip='xclip -selection clipboard' 
 
@@ -121,7 +124,7 @@ alias rwatch='cargo watch -q -c -x "run -q"'
 alias rrun='clear && cargo run -q "run -q"'
 
 # Bash
-alias sz='vim ~/.zshrc'
+alias sz='source ~/.zshrc'
 alias z='vim ~/.zshrc'
 
 # SurrealDB

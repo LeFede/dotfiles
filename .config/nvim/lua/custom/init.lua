@@ -13,4 +13,3 @@ o.smartcase = true
 
 o.relativenumber = true
 
-

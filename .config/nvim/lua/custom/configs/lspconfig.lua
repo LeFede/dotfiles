@@ -14,10 +14,10 @@ for _, lsp in ipairs(servers) do
 end
 
 
-local pid = vim.fn.getpid()
-local omnisharp_bin = "/home/fede/Downloads/omnisharp-vim/run"
+-- local pid = vim.fn.getpid()
+-- local omnisharp_bin = "/home/fede/Downloads/omnisharp-vim/run"
 
-require'lspconfig'.omnisharp.setup{
-  cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) };
-  root_dir = lspconfig.util.root_pattern("*.csproj","*.sln");
-}
+-- require'lspconfig'.omnisharp.setup{
+--   cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) };
+--   root_dir = lspconfig.util.root_pattern("*.csproj","*.sln");
+-- }

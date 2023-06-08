@@ -2,7 +2,8 @@ local options = {
   filters = {
     dotfiles = false,
     custom = {
-      "node_modules"
+      "node_modules",
+      ".git",
     },
     exclude = {
       vim.fn.stdpath "config" .. "/lua/custom",
@@ -32,7 +33,7 @@ local options = {
   },
   actions = {
     open_file = {
-      resize_window = true,
+      -- resize_window = true,
     },
   },
   renderer = {

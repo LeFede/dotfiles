@@ -13,7 +13,7 @@ font:
     family: "JetBrainsMono Nerd Font"
   italic:
     family: "JetBrainsMono Nerd Font"
-  size: 24
+  size: 20
 env:
   TERM: xterm-256color
 # cursor:
