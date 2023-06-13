@@ -144,6 +144,7 @@ alias c='kill -9 -1'
 # TMUX
 alias ta='tmux attach'
 alias h='cd ~'
+alias tk='tmux kill-server'
 
 # Open nvim (file)
 vim() {

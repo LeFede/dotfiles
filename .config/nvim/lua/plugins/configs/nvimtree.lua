@@ -3,7 +3,7 @@ local options = {
     dotfiles = false,
     custom = {
       "node_modules",
-      ".git",
+      -- ".git",
     },
     exclude = {
       vim.fn.stdpath "config" .. "/lua/custom",
