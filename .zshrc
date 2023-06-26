@@ -157,6 +157,10 @@ o() {
 	~/.local/share/nvim.appimage .
 }
 
+# System
+alias rb='systemctl reboot -i'
+alias sd='systemctl poweroff -i'
+
 # ???
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
