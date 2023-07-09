@@ -12,3 +12,6 @@
 
 !.fonts
 !.gitignore
+
+!.prettierrc
+!.eslint

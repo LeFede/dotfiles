@@ -1,13 +1,7 @@
 local options = {
   filters = {
     dotfiles = false,
-    custom = {
-      "node_modules",
-      -- ".git",
-    },
-    exclude = {
-      vim.fn.stdpath "config" .. "/lua/custom",
-    },
+    exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
   },
   disable_netrw = true,
   hijack_netrw = true,
@@ -22,25 +16,25 @@ local options = {
     adaptive_size = false,
     side = "right",
     width = 30,
-    -- hide_root_folder = true,
+    preserve_window_proportions = true,
   },
   git = {
-    enable = false,
-    ignore = true,
+    enable = true,
+    ignore = false,
   },
   filesystem_watchers = {
     enable = true,
   },
   actions = {
     open_file = {
-      -- resize_window = true,
+      resize_window = true,
     },
   },
   renderer = {
-    highlight_git = false,
+    root_folder_label = false,
+    highlight_git = true,
     highlight_opened_files = "none",
 
-    root_folder_label = false,
     indent_markers = {
       enable = false,
     },
@@ -50,19 +44,19 @@ local options = {
         file = true,
         folder = true,
         folder_arrow = true,
-        git = false,
+        git = true,
       },
 
       glyphs = {
-        default = "",
+        default = "󰈚",
         symlink = "",
         folder = {
-          default = "",
-          empty = "",
+          default = "",
+          empty = "",
           empty_open = "",
           open = "",
-          symlink = "",
-          symlink_open = "",
+          symlink = "",
+          symlink_open = "",
           arrow_open = "",
           arrow_closed = "",
         },
@@ -79,4 +73,5 @@ local options = {
     },
   },
 }
+
 return options
