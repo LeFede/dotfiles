@@ -2,15 +2,8 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = {
-  "emmet_ls",
-  "html",
-  "cssls",
-  "tsserver",
-  "cssmodules_ls",
-  -- "lua_ls"
-}
--- local util = require "lspconfig/util"
+local servers = { "html", "cssls", "tsserver", "cssmodules_ls" }
+local util = require "lspconfig/util"
 
 
 for _, lsp in ipairs(servers) do
@@ -19,5 +12,4 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
 

@@ -6,6 +6,7 @@
 !.config/alacritty
 !.config/nvim
 !.config/tmux
+!.config/nvim.BACKUP
 
 !.zshrc
 !.bashrc

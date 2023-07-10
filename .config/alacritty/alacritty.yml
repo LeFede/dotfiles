@@ -1,5 +1,6 @@
-# import:
-  # - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+  # - ~/.config/alacritty/onedark.yml
 window:
   history: 10000
   # decorations: 'none'
@@ -13,11 +14,11 @@ font:
     family: "JetBrainsMono Nerd Font"
   italic:
     family: "JetBrainsMono Nerd Font"
-  size: 18
+  size: 19
 env:
   TERM: xterm-256color
-# cursor:
-#   #   - ▇ Block
-#   #   - _ Underline
-#   #   - | Beam
-#  style: Beam
+cursor:
+ style: Underline
+    # - ▇ Block
+    # - _ Underline
+  #   - | Beam

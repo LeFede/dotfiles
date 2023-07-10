@@ -12,4 +12,8 @@ local sources = {
 null_ls.setup {
   debug = true,
   sources = sources,
+  -- FEDE autoprettier
+  -- on_attach = function(client)
+  --   vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
+  -- end,
 }

@@ -1,5 +1,6 @@
 local plugins = {
   {
+    -- LSP
     "neovim/nvim-lspconfig",
     dependencies = {
       "jose-elias-alvarez/null-ls.nvim",
@@ -14,11 +15,13 @@ local plugins = {
     end,
   },
  {
+    -- MASON
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
         "typescript-language-server",
         -- "emmet-language-server",
+        "css-lsp",
         "cssmodules-language-server",
         "emmet-ls",
         "prettier",
@@ -26,6 +29,7 @@ local plugins = {
     }
   },
   {
+    -- HIGHLIGHT
     "nvim-treesitter/nvim-treesitter",
     opts = {
       autotag = {
@@ -43,6 +47,19 @@ local plugins = {
         "json",
       }
     }
+  },
+  {
+    -- AUTO SAVE
+    "Pocco81/auto-save.nvim",
+    event = "TextChanged",
+    config = function()
+      require("auto-save").setup()
+    end
+  },
+  {
+    -- TMUX NAVIGATOR
+    "christoomey/vim-tmux-navigator",
+    lazy = false
   },
 }
 

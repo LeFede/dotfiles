@@ -1,7 +1,12 @@
+-- Chadrc overrides this file
+
 local M = {}
 
 M.options = {
-  nvchad_branch = "v2.0",
+  nvChad = {
+    update_url = "https://github.com/NvChad/NvChad",
+    update_branch = "v2.0",
+  },
 }
 
 M.ui = {
@@ -11,12 +16,8 @@ M.ui = {
   hl_override = {},
   changed_themes = {},
   theme_toggle = { "onedark", "one_light" },
-  theme = "onedark", -- default theme
+  theme = "cattpuccin", -- default theme
   transparency = true,
-  lsp_semantic_tokens = false, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
-
-  -- https://github.com/NvChad/base46/tree/v2.0/lua/base46/extended_integrations
-  extended_integrations = {}, -- these aren't compiled by default, ex: "alpha", "notify"
 
   -- cmp themeing
   cmp = {
@@ -27,7 +28,9 @@ M.ui = {
     selected_item_bg = "colored", -- colored / simple
   },
 
-  telescope = { style = "borderless" }, -- borderless / bordered
+  telescope = {
+    style = "borderless", -- borderless / bordered
+  },
 
   ------------------------------- nvchad_ui modules -----------------------------
   statusline = {
@@ -64,15 +67,17 @@ M.ui = {
 
     buttons = {
       { "  Find File", "Spc f f", "Telescope find_files" },
-      { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
-      { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
-      { "  Bookmarks", "Spc m a", "Telescope marks" },
+      { "  Recent Files", "Spc f o", "Telescope oldfiles" },
+      { "  Find Word", "Spc f w", "Telescope live_grep" },
+      { "  Bookmarks", "Spc b m", "Telescope marks" },
       { "  Themes", "Spc t h", "Telescope themes" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
   },
 
-  cheatsheet = { theme = "grid" }, -- simple/grid
+  cheatsheet = {
+    theme = "grid", -- simple/grid
+  },
 
   lsp = {
     -- show function signatures i.e args as you type
@@ -83,10 +88,11 @@ M.ui = {
   },
 }
 
-M.plugins = "" -- path i.e "custom.plugins", so make custom/plugins.lua file
+M.plugins = "" -- path i.e "custom.plugins" -> custom/plugins.lua only and not custom/plugins/init.lua!!!!
 
 M.lazy_nvim = require "plugins.configs.lazy_nvim" -- config for lazy.nvim startup options
 
-M.mappings = require "core.mappings"
+-- these are default mappings, check core.mappings for table structure
+M.mappings = {}
 
 return M

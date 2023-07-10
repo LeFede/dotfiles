@@ -28,14 +28,10 @@ M.luasnip = function(opts)
   -- vscode format
   require("luasnip.loaders.from_vscode").lazy_load()
   require("luasnip.loaders.from_vscode").lazy_load { paths = vim.g.vscode_snippets_path or "" }
-  -- FEDE
-  -- require("luasnip.loaders.from_vscode").lazy_load({paths = "~/.config/nvim/snippets"})
 
   -- snipmate format
   require("luasnip.loaders.from_snipmate").load()
   require("luasnip.loaders.from_snipmate").lazy_load { paths = vim.g.snipmate_snippets_path or "" }
-  -- FEDE
-  -- require("luasnip.loaders.from_snipmate").lazy_load({paths = "~/.config/nvim/snippets"})
 
   -- lua format
   require("luasnip.loaders.from_lua").load()
@@ -55,12 +51,12 @@ end
 
 M.gitsigns = {
   signs = {
-    add = { text = "│" },
-    change = { text = "│" },
-    delete = { text = "󰍵" },
-    topdelete = { text = "‾" },
-    changedelete = { text = "~" },
-    untracked = { text = "│" },
+    add = { hl = "DiffAdd", text = "│", numhl = "GitSignsAddNr" },
+    change = { hl = "DiffChange", text = "│", numhl = "GitSignsChangeNr" },
+    delete = { hl = "DiffDelete", text = "", numhl = "GitSignsDeleteNr" },
+    topdelete = { hl = "DiffDelete", text = "‾", numhl = "GitSignsDeleteNr" },
+    changedelete = { hl = "DiffChangeDelete", text = "~", numhl = "GitSignsChangeNr" },
+    untracked = { hl = "GitSignsAdd", text = "│", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
   },
   on_attach = function(bufnr)
     utils.load_mappings("gitsigns", { buffer = bufnr })

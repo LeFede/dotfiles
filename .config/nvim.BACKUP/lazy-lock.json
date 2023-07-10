@@ -1,0 +1,4 @@
+{
+  "base46": { "branch": "v2.0", "commit": "bad87b034430b0241d03868c3802c2f1a4e0b4be" },
+  "lazy.nvim": { "branch": "main", "commit": "5af331ea65418dc9361769891921fdee4bcc837a" }
+}
